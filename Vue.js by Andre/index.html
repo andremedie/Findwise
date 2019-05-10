@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="button-1">
+    <button v-on:click="buttonone">Findwise</button>
+  </div>
+
+  <script>var example2 = new Vue({
+    el: '#button-1',
+    data: {
+      name: 'Findwise'
+    },
+    methods: {
+      buttonone: function (event) {
+        alert('Hello ' + this.name + '!')
+        if (event) {
+          alert(event.target.tagName)
+        }
+      }
+    }
+  })
+
+  example2.greet() // => 'Hello Findwise'
+
+  </script>
